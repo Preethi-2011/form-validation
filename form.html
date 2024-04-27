@@ -1,0 +1,56 @@
+<html>
+    <head>
+<link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+      <div class="form">
+        <h1>Login to Coding Market</h1>
+      <div >
+        
+        <label style="display:block">Username</label>
+        <p id="nam" style="font-size:12px;color:red"></p>
+        <input type="text" id="user" class="user">
+         
+        </div>
+
+        <div>
+         <label style="display:block;">Password</label>
+          <p id="output" style="font-size:12px;color:red"></p>
+         <input type="password" id="password" class="password">
+         
+         <p id="res" style="font-size:12px;color:red"></p>
+         <button onclick="validate()" style="height:30px;width:300px;background-color: rgb(87, 199, 87);color:white">LOGIN</button>
+         
+          
+        </div>
+        </div>
+        <script>
+            function validate(){
+          var name=document.getElementById("user").value;
+          var password=document.getElementById("password").value;
+          if(name.length<=4||name.length==0 &&password.length<6||password.length>12 )
+          {
+             document.getElementById("res").innerHTML="Incorrect username or Password.Please try again"
+            
+          }
+          if(name.length<=4||name.length==0)
+          {
+            document.getElementById("nam").innerHTML="Name not valid"
+            
+          }
+          if(password.length<6||password.length>12)
+          {
+            document.getElementById("output").innerHTML="Password not valid"
+            let pasInput = document.getElementById('password')
+            pasInput.style = " border: solid red ;"
+            return false;
+          }
+          else{
+            alert("Successfully verified");
+          }
+          
+        
+            }
+        </script>
+    </body>
+</html>
